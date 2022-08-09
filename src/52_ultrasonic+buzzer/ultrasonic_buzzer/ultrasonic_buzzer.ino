@@ -17,7 +17,7 @@ int i;
 
 void setup()
 {
-  Serial.begin(9600);                  // 통신속도설정
+  Serial.begin(115200);                  // 통신속도설정
   pinMode(TRIG, OUTPUT);               // 핀 모드 설정
   pinMode(ECHO, INPUT);                // 핀 모드 설정
   pinMode (buzzer, OUTPUT) ;           // 핀 모드 설정

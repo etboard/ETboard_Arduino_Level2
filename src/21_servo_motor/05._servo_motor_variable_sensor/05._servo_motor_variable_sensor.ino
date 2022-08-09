@@ -1,6 +1,6 @@
 /******************************************************************************************
  * FileName     : 05._servo_motor_variable_sensor
- * Description  : 가변저항으로 서버모터 제어 해보기
+ * Description  : 가변저항으로 서보모터 제어 해보기
  * Author       : 이인정
  * Created Date : 2021.06.17
  * Reference    : 

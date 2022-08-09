@@ -41,12 +41,12 @@ void loop(){
     oled.setLine(2,"danger !");
   }
   
-  if(distance > 20)                     // 물체와의 거리가 30cm 이하 20cm이상이면 "warning !" 출력
+  if(distance >= 20)                     // 물체와의 거리가 40cm 이하 20cm이상이면 "warning !" 출력
   {
     oled.setLine(2,"warning !");
   }
   
-  if(distance > 30)                     // 물체와 거리가 30cm 이상이면 "safe !" 출력
+  if(distance >= 40)                     // 물체와 거리가 40cm 이상이면 "safe !" 출력
   {
     oled.setLine(2,"safe !");
   }

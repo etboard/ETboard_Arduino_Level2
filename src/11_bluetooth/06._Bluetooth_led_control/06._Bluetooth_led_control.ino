@@ -91,6 +91,14 @@ void loop() {
     digitalWrite(led_green, LOW);
     digitalWrite(led_yellow, LOW);
   }
+    else if(cmd == 'A')
+  {
+    Serial.println("모두 온 !!");
+    digitalWrite(led_red, HIGH);
+    digitalWrite(led_blue, HIGH);
+    digitalWrite(led_green, HIGH);
+    digitalWrite(led_yellow, HIGH);
+  }
   else
   {
     //그 외에는 아무것도 하지 않음

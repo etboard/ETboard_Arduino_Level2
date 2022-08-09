@@ -20,6 +20,7 @@ void setup() {
   pinMode(led_blue,OUTPUT);               // 핀 모드 설정
   pinMode(led_green,OUTPUT);              // 핀 모드 설정
   pinMode(led_yellow,OUTPUT);             // 핀 모드 설정
+  Serial.begin(115200);
 }
 
 
@@ -30,6 +31,7 @@ void loop() {
   digitalWrite(led_blue,LOW);
   digitalWrite(led_green,LOW);
   digitalWrite(led_yellow,LOW);
+  Serial.println(sensor_result);          //센서가 측정한값 출력
   
   if(sensor_result>500){                  // 센서측정값이 500초과 빨강 LED 켜기
     digitalWrite(led_red,HIGH);

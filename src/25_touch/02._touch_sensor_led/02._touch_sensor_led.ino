@@ -1,6 +1,6 @@
 /******************************************************************************************
  * FileName     : 02._touch_sensor_led
- * Description  : 터치센서에 터치 해 LED를 켜보기
+ * Description  : 터치센서에 터치 해서 LED를 켜보기
  * Author       : 이인정
  * Created Date : 2021.06.17
  * Reference    : 
@@ -16,7 +16,7 @@ int led_yellow = D5;                                    // 노랑 LED
 
 
 void setup() {
-  Serial.begin(9600);                                   // 통신속도
+  Serial.begin(115200);                                 // 통신속도
   pinMode(touch_sensor, INPUT);                         // 핀 모드 설정
   pinMode(led_red, OUTPUT);                             // 핀 모드 설정
   pinMode(led_blue, OUTPUT);                            // 핀 모드 설정

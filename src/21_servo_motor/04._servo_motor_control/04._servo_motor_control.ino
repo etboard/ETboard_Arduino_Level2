@@ -1,6 +1,6 @@
 /******************************************************************************************
  * FileName     : 04._servo_motor_control
- * Description  : 빨강, 노랑 버튼을 눌러 서버모터를 제어 해보기
+ * Description  : 빨강, 노랑 버튼을 눌러 서보모터를 제어 해보기
  * Author       : 이인정
  * Created Date : 2021.06.04
  * Reference    : 
@@ -35,7 +35,7 @@ void loop() {
     servo.write(posDegrees);
   }
   
-  if(posDegrees > 180){                // 서보모터의 성정각도가 180도 이상이 되지 않게 설정
+  if(posDegrees > 180){                // 서보모터의 설정각도가 180도 이상이 되지 않게 설정
     posDegrees = 180;
   }
   
