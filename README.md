@@ -3,7 +3,7 @@
 * ET-Board Arduino Level 2 Contents
 </br></br>
 
-  
+
 ### 문서 및 자료(Documentation & File)
 
 아래 자료는 [이티보드(ET-Board) 자료실](http://et.ketri.re.kr/board/)에서도 얻을 수 있습니다.
@@ -16,10 +16,8 @@
 
 <!--
 ### 학습 목차(Contents)
-
-* [01. LED 한개 켜고 끄기](http://oapass.com/pub/ketri/2021/arduino/F211126_ETboard_Arduino_Manual.pdf) [설명](..) 동영상[클릭](https://youtu.be/IhXoGCDPbXQ)
+* [01. LED 한개 켜고 끄기](https://ketri2484.github.io/ETboard_Arduino_Level2/doc/pdf/01.LED_1.pdf) [[소스]](https://ketri2484.github.io/ETboard_Arduino_Level2/src/01_led/01._led_one_blink/01._led_one_blink.ino) [[동영상]](https://youtu.be/IhXoGCDPbXQ)
 -->
-
 
 ### 이티보드(ETboard) 채널 안내
 
@@ -36,4 +34,3 @@
 * [KETRi 인스타그램 (https://www.instagram.com/ketri_no1/)](https://www.instagram.com/ketri_no1/)
 * KETRi 전화번호: 061-721-2484
 </br></br>
-
