@@ -81,7 +81,7 @@ void loop() {
     Serial.println("노랑 온 !!!!");
     digitalWrite(led_yellow, HIGH);
   }  
-  else if(cmd == '8'){                    // 9 입력되었을 때 노랑 LED 끄기
+  else if(cmd == '8'){                    // 8 입력되었을 때 노랑 LED 끄기
     Serial.println("노랑 오프 !!");
     digitalWrite(led_yellow, LOW);
   }
