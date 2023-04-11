@@ -6,9 +6,9 @@
  *Reference    : ET보드(ESP32)는 2.4GHz WiFi만 지원함
  *Modified     : 2021.12.16 : LEH : 소스 크린징
  ******************************************************************************************/
-
-#include <WiFi.h> 
+// WiFi 연결을 위해서는 2.5GHz WiFi가 필수입니다.(5GHz 불가능)
 // 이 라이브러리를 통해 Arduino 보드를 인터넷에 연결할 수 있습니다. 
+#include <WiFi.h> 
 
 int led2 = D2;                                         // 빨강 LED
 int led3 = D3;                                         // 파랑 LED
@@ -18,13 +18,12 @@ int led5 = D5;                                         // 노랑 LED
  
 const char* ssid     = "ssid";                         // 와이파이 이름
 const char* password = "password";                     // 와이파이 비번
- 
-WiFiServer server(80); 
+
 // 지정된 포트에서 들어오는 연결을 수신하는 서버를 만듭니다.
+WiFiServer server(80); 
 
  
-void setup()
-{
+void setup() {
     Serial.begin(115200);                              // 통신
     pinMode(led2, OUTPUT);                             // 핀 모드 설정
     pinMode(led3, OUTPUT);                             // 핀 모드 설정

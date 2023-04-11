@@ -10,6 +10,8 @@
  * Modified     : 2021.12.16 : LEH : 소스 크린징
 ******************************************************************************************/
 
+// 블루투스 연결을 위해서는 안드로이드 기기가 필수입니다.(iOS 불가능)
+
 // 시리얼 통신으로 제어
 #include "BluetoothSerial.h"
 
@@ -79,7 +81,7 @@ void loop() {
     Serial.println("노랑 온 !!!!");
     digitalWrite(led_yellow, HIGH);
   }  
-  else if(cmd == '8'){                    // 9 입력되었을 때 노랑 LED 끄기
+  else if(cmd == '8'){                    // 8 입력되었을 때 노랑 LED 끄기
     Serial.println("노랑 오프 !!");
     digitalWrite(led_yellow, LOW);
   }
