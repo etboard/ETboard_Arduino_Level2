@@ -54,7 +54,9 @@ void loop() {
   
   if(button_red_value == 0 && button_red_old_value == 1){
     led_red_status = 1 - led_red_status;
+    delay(200);
   }
+  
   button_red_old_value = button_red_value;
   if(led_red_status == 1){
     digitalWrite(led_red, HIGH);
@@ -67,7 +69,9 @@ void loop() {
   
   if(button_blue_value == 0 && button_blue_old_value == 1){
     led_blue_status = 1 - led_blue_status;
+    delay(200);
   }
+  
   button_blue_old_value = button_blue_value;
   if(led_blue_status == 1){
     digitalWrite(led_blue, HIGH);
@@ -80,7 +84,9 @@ void loop() {
   
   if(button_green_value == 0 && button_green_old_value == 1){
     led_green_status = 1 - led_green_status;
+    delay(200);
   }
+  
   button_green_old_value = button_green_value;
   if(led_green_status == 1){
     digitalWrite(led_green, HIGH);
@@ -93,7 +99,9 @@ void loop() {
   
   if(button_yellow_value == 0 && button_yellow_old_value == 1){
     led_yellow_status = 1 - led_yellow_status;
+    delay(200);
   }
+  
   button_yellow_old_value = button_yellow_value;
   if(led_yellow_status == 1){
     digitalWrite(led_yellow, HIGH);
