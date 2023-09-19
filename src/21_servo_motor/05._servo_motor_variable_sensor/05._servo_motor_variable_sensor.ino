@@ -6,13 +6,14 @@
  * Reference    : 
  * Modified     : 2021.06.17 : LIJ : 헤더 수정
  * Modified     : 2021.12.16 : LEH : 소스 크린징
+ * Modified     : 2023.09.19 : PEJ : 서보모터 핀 수정
 ******************************************************************************************/
 
 #include <Servo.h>
 
-static const int servoPin = D2;                           // 서보모터
-int posDegrees            = 0;                            // 서보모터 설정각도 값
-int sensor                = A0;                           // 가변저항
+static const int servoPin = D6;                           // 서보모터
+int posDegrees = 0;                                       // 서보모터 설정각도 값
+int sensor = A0;                                          // 가변저항
 Servo servo;                                              // 서보모터 선언
 
 
