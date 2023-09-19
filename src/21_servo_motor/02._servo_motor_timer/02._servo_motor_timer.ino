@@ -6,11 +6,12 @@
  * Reference    : 
  * Modified     : 2021.06.08 : LIJ : 헤더 수정
  * Modified     : 2021.12.16 : LEH : 소스 크린징
+ * Modified     : 2023.9.19 : PEJ : 서보모터 핀 변경
 ******************************************************************************************/
 
 #include <Servo.h>
 
-static const int servoPin = D2;     // 서보모터
+static const int servoPin = D6;     // 서보모터
 Servo servo;
 
 
