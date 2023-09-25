@@ -6,12 +6,13 @@
  * Reference    : 
  * Modified     : 2021.06.17 : LIJ : 헤더 수정
  * Modified     : 2021.12.16 : LEH : 소스 크린징
+ * Modified     : 2023.09.19 : PEJ : 서보모터 핀 변경
 ******************************************************************************************/
 
 #include <Servo.h>
 int TRIG = D9;                          // TRIG 핀 설정 (초음파 보내는 핀)
 int ECHO = D8;                          // ECHO 핀 설정 (초음파 받는 핀)
-static const int servoPin = D2;         // 서보모터 핀 설정
+static const int servoPin = D6;         // 서보모터 핀 설정
 
 Servo servo;                            // 서보모터 선언
 
