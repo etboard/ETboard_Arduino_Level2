@@ -1,0 +1,7 @@
+/********************************************************************************** 
+ * Author       : SCS
+ * Date         : 2018.09.30  
+ * Modified     : 2022.10.03 : SCS : support arduino uno with ET-Upboard
+ * Modified     : 2023.10.11 : SCS : decrease memory for arduino
+ * Modified     : 2024.07.11 : SCS : add 5 line, 8 line
+**********************************************************************************/
