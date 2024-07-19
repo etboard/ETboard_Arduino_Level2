@@ -6,6 +6,7 @@
  * Modified     : 2022.10.03 : SCS : support arduino uno with ET-Upboard
  * Modified     : 2023.10.11 : SCS : decrease memory for arduino
  * Modified     : 2024.07.11 : SCS : add 5 line, 8 line
+ * Modified     : 2024.07.19 : SCS : add setLine(int line, String buffer)
  **********************************************************************************/
 
 #include "oled_u8g2.h"
@@ -152,6 +153,29 @@ void OLED_U8G2::setLine(int line, char* buffer)
   lineString[line - 1] = buffer;  
 }
 
+//=================================================================================
+void OLED_U8G2::setLine(int line, String buffer)
+//=================================================================================
+{   
+  if (line < 1 || line > MAX_LINES) return;  
+  
+  // lineString[line - 1]이 nullptr이 아니고, 동적으로 할당된 메모리를 가리키고 있는지 확인
+  if (lineString[line - 1] != nullptr && lineString[line - 1] != "") {
+    free(lineString[line - 1]);
+    lineString[line - 1] = nullptr;  // 해제 후 nullptr로 설정
+  }  
+  
+  // 새로운 문자열을 위한 메모리를 할당합니다
+  size_t len = buffer.length() + 1;
+  lineString[line - 1] = (char*)malloc(len);
+  
+  // 메모리 할당이 성공했는지 확인합니다
+  if (lineString[line - 1] != nullptr) {
+    // String의 내용을 새로 할당된 메모리에 복사합니다
+    strncpy(lineString[line - 1], buffer.c_str(), len);
+    lineString[line - 1][len - 1] = '\0';  // null 종료 문자 확실히 추가
+  }  
+}
  
 //=================================================================================
 // End of Line

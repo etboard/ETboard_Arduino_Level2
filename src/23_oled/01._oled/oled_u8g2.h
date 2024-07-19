@@ -4,6 +4,7 @@
  * Modified     : 2022.10.03 : SCS : support arduino uno with ET-Upboard
  * Modified     : 2023.10.11 : SCS : decrease memory for arduino
  * Modified     : 2024.07.11 : SCS : add 5 line, 8 line
+ * Modified     : 2024.07.19 : SCS : add setLine(int line, String buffer)
 **********************************************************************************/
 
 #ifndef OLED_U8G2_H
@@ -22,6 +23,7 @@ public:
   void setup(void);
   void clearDisplay(void);
   void setLine(int line, char* buffer);
+  void setLine(int line, String buffer);
   void display(int display_line = 3); 
 };
 

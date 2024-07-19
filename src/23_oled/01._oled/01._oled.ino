@@ -18,8 +18,7 @@ void setup(){
 }
 
 
-void loop(){
-  Serial.println("step 1");
+void loop(){  
   oled.setLine(1,"* Aqua *"); 
   oled.setLine(2,"Mode : automatic");
   oled.setLine(3,"step : 4");    
