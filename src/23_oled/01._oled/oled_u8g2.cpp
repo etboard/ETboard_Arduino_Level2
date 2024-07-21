@@ -41,13 +41,13 @@
 OLED_U8G2::OLED_U8G2() 
 //=================================================================================  
 {
-  lineString[0] = "";
-  lineString[1] = "";
-  lineString[2] = "";
-  lineString[3] = "";
-  lineString[4] = "";
-  lineString[5] = "";
-  lineString[6] = "";   
+  lineString[0] = (char*) "";
+  lineString[1] = (char*) "";
+  lineString[2] = (char*) "";
+  lineString[3] = (char*) "";
+  lineString[4] = (char*) "";
+  lineString[5] = (char*) "";
+  lineString[6] = (char*) "";   
 }
 
 #if defined(ARDUINO_AVR_UNO)    
@@ -146,15 +146,15 @@ void OLED_U8G2::display(int display_line)
 #endif
 
 //=================================================================================
-void OLED_U8G2::setLine(int line, char* buffer)
+void OLED_U8G2::setLine(int line, const char* buffer)    // 문자 배열
 //=================================================================================
 {  
   if (line < 1 || line > MAX_LINES) return;
-  lineString[line - 1] = buffer;  
+  lineString[line - 1] = (char *)buffer;  
 }
 
 //=================================================================================
-void OLED_U8G2::setLine(int line, String buffer)
+void OLED_U8G2::setLine(int line, String buffer)  // 문자열
 //=================================================================================
 {   
   if (line < 1 || line > MAX_LINES) return;  
@@ -175,6 +175,32 @@ void OLED_U8G2::setLine(int line, String buffer)
     strncpy(lineString[line - 1], buffer.c_str(), len);
     lineString[line - 1][len - 1] = '\0';  // null 종료 문자 확실히 추가
   }  
+}
+
+//=================================================================================
+void OLED_U8G2::setLine(int line, int buffer)  // 정수
+//=================================================================================
+{
+  if (line < 1 || line > MAX_LINES) return;
+
+  // 정수를 문자열로 변환
+  String intString = String(buffer);
+
+  // String 버전의 setLine 함수 호출
+  setLine(line, intString);
+}
+
+//=================================================================================
+void OLED_U8G2::setLine(int line, float buffer, int decimal_point)  // 실수
+//=================================================================================
+{
+  if (line < 1 || line > MAX_LINES) return;
+
+  // 실수를 문자열로 변환
+  String floatString = String(buffer, decimal_point);
+
+  // String 버전의 setLine 함수 호출
+  setLine(line, floatString);
 }
  
 //=================================================================================
