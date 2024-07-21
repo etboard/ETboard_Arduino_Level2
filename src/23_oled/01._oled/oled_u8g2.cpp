@@ -7,6 +7,7 @@
  * Modified     : 2023.10.11 : SCS : decrease memory for arduino
  * Modified     : 2024.07.11 : SCS : add 5 line, 8 line
  * Modified     : 2024.07.19 : SCS : add setLine(int line, String buffer)
+ * Modified     : 2024.07.21 : SCS : add two setLine()
  **********************************************************************************/
 
 #include "oled_u8g2.h"
