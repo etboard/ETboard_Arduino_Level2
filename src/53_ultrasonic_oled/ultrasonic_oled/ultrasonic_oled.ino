@@ -6,6 +6,7 @@
  * Reference    : 
  * Modified     : 2021.06.17 : LIJ : 헤더 수정
  * Modified     : 2021.12.16 : LEH : 소스 크린징
+ * Modified     : 2024.07.31 : SCS : 주석 수정
 ******************************************************************************************/
 
 #include"oled_u8g2.h"
@@ -36,12 +37,12 @@ void loop(){
 
   oled.setLine(2," ");
   
-  if(distance > 0)                      // 물체와의 거리가 20cm 이하이면 "danger !" 출력
+  if(distance > 0)                      // 물체와의 거리가 20cm 미만이면 "danger !" 출력
   {
     oled.setLine(2,"danger !");
   }
   
-  if(distance >= 20)                     // 물체와의 거리가 40cm 이하 20cm이상이면 "warning !" 출력
+  if(distance >= 20)                     // 물체와의 거리가 40cm 미만이고 20cm이상이면 "warning !" 출력
   {
     oled.setLine(2,"warning !");
   }

@@ -6,6 +6,7 @@
  * Reference    : 
  * Modified     : 2021.06.17 : LIJ : 헤더 수정
  * Modified     : 2021.12.16 : LEH : 소스 크린징
+ * Modified     : 2024.07.31 : SCS : 주석 수정
 ******************************************************************************************/
 
 #include "oled_u8g2.h"
@@ -23,7 +24,7 @@ void setup(){
 void loop(){
   int sensor_result = analogRead(sensor);  // 조도센서의 값 읽기
   
-  if(sensor_result >= 700)                 // 조도센서의 값이 700초과이면 
+  if(sensor_result >= 700)                 // 조도센서의 값이 700d이상이면 
   {
     oled.setLine(2,"morning !");           // morning ! 출력
   }
