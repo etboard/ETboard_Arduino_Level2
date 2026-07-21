@@ -6,13 +6,14 @@
  * Reference    : 
  * Modified     : 2021.06.08 : LIJ : 헤더 수정 
  * Modified     : 2021.12.16 : LEH : 소스 크린징
+ * Modified     : 2026.07.21 : PEJ : 서보 핀 D2 -> D6, 버튼 핀 D6/D9 -> D7/D8 변경
 ******************************************************************************************/
 
 #include <Servo.h>
 
-static const int servoPin = D2;             // 서보모터
-int up = D6;                                // 빨강 버튼         
-int down = D9;                              // 노랑 버튼
+static const int servoPin = D6;             // 서보모터
+int up = D7;                                // 파랑 버튼
+int down = D8;                              // 초록 버튼
 
 Servo servo;
 
